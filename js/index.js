@@ -1,14 +1,9 @@
+
 const modeToggleCheckbox = document.getElementById('dark-mode-toggle');
 let currentMode = localStorage.getItem('mode');
 
 const logoLight = document.getElementById('logo-light');
 const logoDark = document.getElementById('logo-dark');
-
-// Check if currentMode is null, indicating no user choice yet
-if (currentMode === null) {
-  currentMode = 'dark'; // Set dark mode as the default
-  localStorage.setItem('mode', currentMode); // Store the default mode
-}
 
 function setMode() {
   if (modeToggleCheckbox.checked) {
@@ -38,3 +33,4 @@ darkTab.addEventListener('click', (e) => {
   modeToggleCheckbox.checked = !modeToggleCheckbox.checked;
   setMode();
 });
+
